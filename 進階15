@@ -1,0 +1,32 @@
+#include<stdlib.h>
+#include<string.h>
+
+int main(void){
+
+	printf("3A713221 林昱慶\n\n");
+	char input_arr[]="Taiwan, Touch, Your, Heart";
+	char *ptr_input;
+
+	int i;
+	int length;
+	length=strlen(input_arr);
+	ptr_input=input_arr;
+
+	for(i=0;i<length;i++){
+
+		if(*(ptr_input+i)>64 && *(ptr_input+i)<90){
+			printf("%c", *(ptr_input+i));
+		}
+
+		else if(*(ptr_input+i)>96 && *(ptr_input+i)<123){
+			printf("%c", *(ptr_input+i));
+		}
+
+		else if(*(ptr_input+i)==32){
+			printf("%c", *(ptr_input+i));
+		}
+	}
+	printf("\n\n");
+	system("pause");
+	return 0;
+}
